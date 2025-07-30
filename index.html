@@ -347,23 +347,46 @@
                                         <input type="number" id="totalAmount" readonly>
                                     </div>
                                     <div class="form-group">
-                                        <label for="paidAmount">Paid Amount (৳)</label>
-                                        <input type="number" id="paidAmount" required min="0">
+                                        <label for="discountedAmount">Discounted Amount (৳)</label>
+                                        <input type="number" id="discountedAmount" readonly>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group">
+                                        <label for="discountType">Discount Type</label>
+                                        <select id="discountType" onchange="feePaymentManager.calculateTotalAmount()">
+                                            <option value="fixed">Fixed Amount</option>
+                                            <option value="percentage">Percentage</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="discountAmount">Discount Amount</label>
+                                        <input type="number" id="discountAmount" min="0" onchange="feePaymentManager.calculateTotalAmount()">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Apply Discount To</label>
+                                    <div id="discountSelection" class="checkbox-group"></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="paidAmount">Paid Amount (৳)</label>
+                                        <input type="number" id="paidAmount" required min="0">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="dueAmount">Due Amount (৳)</label>
                                         <input type="number" id="dueAmount" readonly>
                                     </div>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group">
                                         <label for="reference">Reference</label>
                                         <input type="text" id="reference">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="receivedBy">Payment Received By</label>
-                                    <input type="text" id="receivedBy" required>
+                                    <div class="form-group">
+                                        <label for="receivedBy">Payment Received By</label>
+                                        <input type="text" id="receivedBy" required>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Process Payment</button>
                             </form>
