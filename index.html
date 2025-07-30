@@ -233,6 +233,7 @@
                     <div class="management-card full-width">
                         <h3>Add Student</h3>
                         <form id="addStudentForm">
+                            <div class="form-section-header">Personal Information</div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="studentName">Student Name</label>
@@ -254,55 +255,32 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="form-section-header">Contact Information</div>
                             <div class="form-row">
                                 <div class="form-group">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="discountAmount">Discount Amount (৳)</label>
-                                    <input type="number" id="discountAmount" min="0" step="0.01" onchange="feePaymentManager.calculateTotalAmount()">
-                                </div>
-                                <div class="form-group">
-                                    <label for="discountType">Discount Type</label>
-                                    <select id="discountType" onchange="feePaymentManager.calculateTotalAmount()">
-                                        <option value="fixed">Fixed Amount</option>
-                                        <option value="percentage">Percentage</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Discount Applied To</label>
-                                <div id="discountSelection" class="checkbox-group">
-                                    <p>Please select courses and months first</p>
-                                </div>
-                            </div>
                                     <label for="studentPhone">Student Phone</label>
                                     <input type="tel" id="studentPhone" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="guardianName">Guardian Name</label>
-                                <div class="form-group">
-                                    <label for="discountedAmount">Discounted Amount (৳)</label>
-                                    <input type="number" id="discountedAmount" readonly>
-                                </div>
-                            </div>
-                            <div class="form-row">
                                     <input type="text" id="guardianName" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="guardianPhone">Guardian Phone</label>
+                                    <input type="tel" id="guardianPhone" required>
+                                </div>
                             </div>
+                            <div class="form-section-header">Academic Information</div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="studentBatch">Batch</label>
-                            </div>
-                            <div class="form-row">
                                     <select id="studentBatch" required>
                                         <option value="">Select Batch</option>
-                                    <input type="text" id="reference" placeholder="Required if discount is applied">
+                                    </select>
                                 </div>
                             </div>
+                            <div class="form-section-header">Course Enrollment</div>
                             <div class="form-group">
-                                <label>Course Enrollment</label>
                                 <div id="courseSelection" class="course-selection">
                                     <p>Please select a batch first</p>
                                 </div>
