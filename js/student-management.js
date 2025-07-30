@@ -353,7 +353,7 @@ class StudentManagementManager {
                                 if (!monthPayment) {
                                     // No payment made for this month
                                     unpaidDue += month.payment;
-                                    const remainingDue = Math.max(0, month.payment - monthPayment.totalPaid - monthPayment.totalDiscount);
+                                } else {
                                     // Partial payment made, calculate remaining due
                                     const remainingDue = Math.max(0, month.payment - monthPayment.totalPaid - monthPayment.totalDiscount);
                                     if (remainingDue > 0) {
